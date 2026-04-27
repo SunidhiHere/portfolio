@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sunidhi Bharti — Data Scientist</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=Syne:wght@300;400;600;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- SCAN LINE OVERLAY -->
+  <div class="scanlines"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav__logo">SB<span class="blink">_</span></div>
+    <ul class="nav__links">
+      <li><a href="#home"><span class="nav-num">01.</span>Home</a></li>
+      <li><a href="#about"><span class="nav-num">02.</span>About</a></li>
+      <li><a href="#skills"><span class="nav-num">03.</span>Skills</a></li>
+      <li><a href="#projects"><span class="nav-num">04.</span>Projects</a></li>
+      <li><a href="#contact"><span class="nav-num">05.</span>Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#home" class="mobile-link">01. Home</a></li>
+      <li><a href="#about" class="mobile-link">02. About</a></li>
+      <li><a href="#skills" class="mobile-link">03. Skills</a></li>
+      <li><a href="#projects" class="mobile-link">04. Projects</a></li>
+      <li><a href="#contact" class="mobile-link">05. Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HOME -->
+  <section class="hero" id="home">
+    <div class="hero__noise"></div>
+
+    <div class="hero__terminal">
+      <span class="term-prompt">~/sunidhi $</span>
+      <span class="term-cmd" id="termCmd"></span><span class="term-cursor blink">█</span>
+    </div>
+
+    <div class="hero__main">
+      <div class="hero__tag">DATA SCIENTIST &nbsp;/&nbsp; ML ENGINEER &nbsp;/&nbsp; AI RESEARCHER</div>
+      <h1 class="hero__name">
+        <span class="name-line" data-text="SUNIDHI">SUNIDHI</span>
+        <span class="name-line accent-line" data-text="BHARTI">BHARTI</span>
+      </h1>
+      <p class="hero__sub">Turning noise into signal — one model at a time.</p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">
+          <span class="btn-text">VIEW WORK</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="assets/resume.pdf" download class="btn btn--ghost">
+          <i class="fas fa-download"></i>
+          <span class="btn-text">RESUME</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__stats">
+      <div class="hero__stat">
+        <span class="stat-val">5<span class="accent">+</span></span>
+        <span class="stat-key">ML Projects</span>
+      </div>
+      <div class="hero__divider"></div>
+      <div class="hero__stat">
+        <span class="stat-val">3<span class="accent">+</span></span>
+        <span class="stat-key">Years Coding</span>
+      </div>
+      <div class="hero__divider"></div>
+      <div class="hero__stat">
+        <span class="stat-val">10<span class="accent">+</span></span>
+        <span class="stat-key">Datasets</span>
+      </div>
+    </div>
+
+    <div class="hero__socials">
+      <a href="https://github.com/SunidhiHere" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/sunidhiBharti" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://kaggle.com/sunidhiBharti" target="_blank"><i class="fab fa-kaggle"></i></a>
+      <a href="mailto:7sunidhibharti@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <div class="hero__scroll-hint">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <div class="section__line"></div>
+        <span class="section__label">ABOUT</span>
+      </div>
+      <div class="about__grid">
+        <div class="about__photo-col">
+          <div class="about__photo-frame">
+            <img src="assets/avatar.jpg" alt="Sunidhi Bharti" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+            <div class="about__photo-placeholder"><i class="fas fa-user"></i></div>
+            <div class="photo-corner tl"></div>
+            <div class="photo-corner tr"></div>
+            <div class="photo-corner bl"></div>
+            <div class="photo-corner br"></div>
+          </div>
+          <div class="about__code-block">
+            <span class="code-line"><span class="code-key">name</span> = <span class="code-str">"Sunidhi Bharti"</span></span>
+            <span class="code-line"><span class="code-key">role</span> = <span class="code-str">"Data Scientist"</span></span>
+            <span class="code-line"><span class="code-key">location</span> = <span class="code-str">"India"</span></span>
+            <span class="code-line"><span class="code-key">status</span> = <span class="code-green">"open_to_work"</span></span>
+          </div>
+        </div>
+        <div class="about__text-col">
+          <h2 class="about__title">I find patterns<br/><span class="accent">where others see chaos.</span></h2>
+          <p>I'm <strong>Sunidhi Bharti</strong>, a data scientist with a deep passion for machine learning, statistical modeling, and extracting meaningful insights from complex data.</p>
+          <p>My toolkit spans the full ML pipeline — from raw data wrangling to deploying production-ready models. I'm especially drawn to NLP, computer vision, and time-series forecasting.</p>
+          <p>I believe in building models that are not just accurate, but explainable and impactful. Data science, done right, changes decisions — and decisions change the world.</p>
+          <div class="about__badges">
+            <span class="badge"><i class="fas fa-check"></i> Available for work</span>
+            <span class="badge"><i class="fas fa-map-marker-alt"></i> India</span>
+            <span class="badge"><i class="fab fa-github"></i> SunidhiHere</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">03</span>
+        <div class="section__line"></div>
+        <span class="section__label">SKILLS</span>
+      </div>
+      <div class="skills__marquee-wrap">
+        <div class="skills__marquee">
+          <span>Python</span><span class="sep">◆</span>
+          <span>TensorFlow</span><span class="sep">◆</span>
+          <span>PyTorch</span><span class="sep">◆</span>
+          <span>Scikit-learn</span><span class="sep">◆</span>
+          <span>XGBoost</span><span class="sep">◆</span>
+          <span>Pandas</span><span class="sep">◆</span>
+          <span>NumPy</span><span class="sep">◆</span>
+          <span>SQL</span><span class="sep">◆</span>
+          <span>Tableau</span><span class="sep">◆</span>
+          <span>Spark</span><span class="sep">◆</span>
+          <span>Docker</span><span class="sep">◆</span>
+          <span>AWS</span><span class="sep">◆</span>
+          <span>Python</span><span class="sep">◆</span>
+          <span>TensorFlow</span><span class="sep">◆</span>
+          <span>PyTorch</span><span class="sep">◆</span>
+          <span>Scikit-learn</span><span class="sep">◆</span>
+          <span>XGBoost</span><span class="sep">◆</span>
+          <span>Pandas</span><span class="sep">◆</span>
+          <span>NumPy</span><span class="sep">◆</span>
+          <span>SQL</span><span class="sep">◆</span>
+          <span>Tableau</span><span class="sep">◆</span>
+          <span>Spark</span><span class="sep">◆</span>
+          <span>Docker</span><span class="sep">◆</span>
+          <span>AWS</span><span class="sep">◆</span>
+        </div>
+      </div>
+
+      <div class="skills__grid">
+        <div class="skill-block">
+          <div class="skill-block__label">01 / ML & AI</div>
+          <div class="skill-block__items">
+            <div class="skill-item"><span class="skill-bar" style="--w:92%"></span><span>Machine Learning</span><span class="skill-pct">92%</span></div>
+            <div class="skill-item"><span class="skill-bar" style="--w:85%"></span><span>Deep Learning</span><span class="skill-pct">85%</span></div>
+            <div class="skill-item"><span class="skill-bar" style="--w:80%"></span><span>NLP</span><span class="skill-pct">80%</span></div>
+            <div class="skill-item"><span class="skill-bar" style="--w:75%"></span><span>Computer Vision</span><span class="skill-pct">75%</span></div>
+          </div>
+        </div>
+        <div class="skill-block">
+          <div class="skill-block__label">02 / DATA</div>
+          <div class="skill-block__items">
+            <div class="skill-item"><span class="skill-bar" style="--w:95%"></span><span>Python / Pandas</span><span class="skill-pct">95%</span></div>
+            <div class="skill-item"><span class="skill-bar" style="--w:88%"></span><span>SQL & Databases</span><span class="skill-pct">88%</span></div>
+            <div class="skill-item"><span class="skill-bar" style="--w:82%"></span><span>Data Visualization</span><span class="skill-pct">82%</span></div>
+            <div class="skill-item"><span class="skill-bar" style="--w:70%"></span><span>Apache Spark</span><span class="skill-pct">70%</span></div>
+          </div>
+        </div>
+        <div class="skill-block">
+          <div class="skill-block__label">03 / TOOLS</div>
+          <div class="skill-block__items">
+            <div class="skill-item"><span class="skill-bar" style="--w:90%"></span><span>Git & GitHub</span><span class="skill-pct">90%</span></div>
+            <div class="skill-item"><span class="skill-bar" style="--w:78%"></span><span>Docker</span><span class="skill-pct">78%</span></div>
+            <div class="skill-item"><span class="skill-bar" style="--w:72%"></span><span>AWS / Cloud</span><span class="skill-pct">72%</span></div>
+            <div class="skill-item"><span class="skill-bar" style="--w:85%"></span><span>Jupyter / Colab</span><span class="skill-pct">85%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">04</span>
+        <div class="section__line"></div>
+        <span class="section__label">PROJECTS</span>
+      </div>
+
+      <div class="projects__list">
+
+        <div class="project-row">
+          <div class="project-row__num">01</div>
+          <div class="project-row__info">
+            <div class="project-row__top">
+              <h3>Customer Churn Prediction</h3>
+              <span class="project-row__tag">Machine Learning</span>
+            </div>
+            <p>End-to-end ML pipeline to predict customer churn for a telecom dataset. XGBoost with SHAP-based explainability. 91% accuracy.</p>
+            <div class="project-row__stack">
+              <span>Python</span><span>XGBoost</span><span>SHAP</span><span>Scikit-learn</span>
+            </div>
+          </div>
+          <div class="project-row__links">
+            <a href="https://github.com/SunidhiHere/project1" target="_blank" class="proj-link"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" class="proj-link"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+        <div class="project-row">
+          <div class="project-row__num">02</div>
+          <div class="project-row__info">
+            <div class="project-row__top">
+              <h3>Sentiment Analysis Engine</h3>
+              <span class="project-row__tag">NLP</span>
+            </div>
+            <p>Fine-tuned BERT for multilingual sentiment classification on product reviews, deployed as a FastAPI REST endpoint. F1-score 88%.</p>
+            <div class="project-row__stack">
+              <span>PyTorch</span><span>HuggingFace</span><span>FastAPI</span><span>BERT</span>
+            </div>
+          </div>
+          <div class="project-row__links">
+            <a href="https://github.com/SunidhiHere/project2" target="_blank" class="proj-link"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" class="proj-link"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+        <div class="project-row">
+          <div class="project-row__num">03</div>
+          <div class="project-row__info">
+            <div class="project-row__top">
+              <h3>Medical Image Classifier</h3>
+              <span class="project-row__tag">Computer Vision</span>
+            </div>
+            <p>CNN classifier detecting pneumonia from chest X-rays using transfer learning on ResNet50. 94% accuracy on NIH dataset.</p>
+            <div class="project-row__stack">
+              <span>TensorFlow</span><span>Keras</span><span>OpenCV</span><span>ResNet50</span>
+            </div>
+          </div>
+          <div class="project-row__links">
+            <a href="https://github.com/SunidhiHere/project3" target="_blank" class="proj-link"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" class="proj-link"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+        <div class="project-row">
+          <div class="project-row__num">04</div>
+          <div class="project-row__info">
+            <div class="project-row__top">
+              <h3>Sales Forecasting Dashboard</h3>
+              <span class="project-row__tag">Time Series</span>
+            </div>
+            <p>Prophet + ARIMA time-series forecasting for retail sales with an interactive Streamlit dashboard showing trends and seasonality.</p>
+            <div class="project-row__stack">
+              <span>Prophet</span><span>ARIMA</span><span>Plotly</span><span>Streamlit</span>
+            </div>
+          </div>
+          <div class="project-row__links">
+            <a href="https://github.com/SunidhiHere/project4" target="_blank" class="proj-link"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" class="proj-link"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="projects__footer">
+        <a href="https://github.com/SunidhiHere" target="_blank" class="btn btn--ghost">
+          <i class="fab fa-github"></i> ALL REPOS ON GITHUB
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">05</span>
+        <div class="section__line"></div>
+        <span class="section__label">CONTACT</span>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__left">
+          <h2 class="contact__title">Let's build<br/><span class="accent">something.</span></h2>
+          <p>Have a data problem, a collaboration idea, or just want to talk ML? Hit me up — I read every message.</p>
+          <div class="contact__details">
+            <a href="mailto:7sunidhibharti@gmail.com" class="contact-detail">
+              <i class="fas fa-envelope"></i>
+              <span>7sunidhibharti@gmail.com</span>
+            </a>
+            <a href="https://github.com/SunidhiHere" target="_blank" class="contact-detail">
+              <i class="fab fa-github"></i>
+              <span>github.com/SunidhiHere</span>
+            </a>
+            <a href="https://linkedin.com/in/sunidhiBharti" target="_blank" class="contact-detail">
+              <i class="fab fa-linkedin-in"></i>
+              <span>linkedin.com/in/sunidhiBharti</span>
+            </a>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <label>NAME</label>
+            <input type="text" name="name" placeholder="Your name" required/>
+          </div>
+          <div class="form-group">
+            <label>EMAIL</label>
+            <input type="email" name="email" placeholder="your@email.com" required/>
+          </div>
+          <div class="form-group">
+            <label>MESSAGE</label>
+            <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" style="width:100%; justify-content:center;">
+            <span class="btn-text">SEND MESSAGE</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__logo">SB<span class="blink">_</span></span>
+      <p>Designed & built by <span class="accent">Sunidhi Bharti</span></p>
+      <p class="footer__copy">© 2025 · All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
